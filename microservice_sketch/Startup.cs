@@ -26,8 +26,6 @@ namespace microservice_sketch
         {
             Configuration = configuration;
 
-            //_api_settings = Configuration.Get<api_settings>();
-
             _api_settings = new api_settings();
             Configuration.GetSection("api_settings").Bind(_api_settings);
         }
@@ -38,13 +36,18 @@ namespace microservice_sketch
         public void ConfigureServices(IServiceCollection services)
         
         {
-            //在 appsetting.json 的 api_settings 裡需設定 該功能 服務中才能使用
+            //at appsetting.json to setting the function will be used
             if (_api_settings.memory_switch) {
                 services.AddScoped<IApiService, AopService>();
             }
 
             if (_api_settings.dataBase_switch) {
                 services.AddScoped<IApiService, DataBase>();
+            }
+
+            if (_api_settings.nlogger_switch)
+            {
+                services.AddScoped<IApiService, NlogService>();
             }
 
             //injection httpClient for ipstack
@@ -55,7 +58,6 @@ namespace microservice_sketch
                 .AddTransientHttpErrorPolicy(p => p.WaitAndRetryAsync(3, _ => TimeSpan.FromSeconds(3)))
                 .AddTransientHttpErrorPolicy(p => p.CircuitBreakerAsync(2, TimeSpan.FromSeconds(10)));
                 
-
             services.Configure<api_settings>(Configuration.GetSection("api_settings"));           
             services.AddControllers();
         }
@@ -68,6 +70,7 @@ namespace microservice_sketch
                 app.UseDeveloperExceptionPage();
             }
 
+            //middleware aop logic 
             if (_api_settings.memory_switch)
             {
                 app.UseAOP();

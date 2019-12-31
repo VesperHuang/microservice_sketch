@@ -27,6 +27,7 @@ namespace microservice_sketch.Controllers
         [HttpGet("/api/[controller]/GetIpInfo/{ip}")]
         public async Task<string> get_ip_info(string ip)
         {
+            //need move to service_data_repository
             var parameter = ip + _access_key;
             var client = _httpClientFactory.CreateClient("ipstack");
             var request = new HttpRequestMessage(HttpMethod.Get, parameter);

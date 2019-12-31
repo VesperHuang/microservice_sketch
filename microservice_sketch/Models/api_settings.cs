@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+/// <summary>
+/// this namespace will move out be the single dll
+/// </summary>
 namespace kooco.common.models
-
 {
     public class api_settings
     {
        public bool memory_switch { get; set; }
 
        public bool dataBase_switch { get; set; }
+
+       public bool nlogger_switch { get; set; }
 
        public memory_catch memory_catch { get; set; }
     }

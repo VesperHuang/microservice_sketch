@@ -24,7 +24,6 @@ namespace microservice_sketch
             catch (Exception ex)
             {
                 logger.Fatal(ex,$" start nLog exception{ ex.Message.ToString()}");
-
             }
             finally {
                 NLog.LogManager.Shutdown();

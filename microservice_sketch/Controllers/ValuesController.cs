@@ -10,6 +10,7 @@ using Microsoft.Extensions.Options;
 
 
 using kooco.common.models;
+using microservice_sketch.Models;
 using microservice_sketch.Services;
 
 namespace microservice_sketch.Controllers
@@ -18,25 +19,13 @@ namespace microservice_sketch.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly IApiService _service;
         private readonly api_settings _api_settings;
         public ValuesController(IEnumerable<IApiService> apiServices,IOptionsSnapshot<api_settings> options) {
             _api_settings = options.Value;
 
-            foreach (var serrvice in apiServices)
-            {
-                switch (serrvice)
-                {
-                    case AopService aop:
-                        _service = aop;
-                        _service.info("use aop service");
-                        break;
-                    case DataBase database:
-                        _service = database;
-                        _service.info("use database service");
-                        break;
-                }
-            }
+            //get service instance
+            IApiService instance = service_data_repository.get_service(apiServices, "microservice_sketch.Services.AopService");
+            instance.info("get instance from apiServices");
         }
 
         // GET api/values

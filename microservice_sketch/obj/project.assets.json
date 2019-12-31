@@ -6076,11 +6076,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
+      "projectUniqueName": "C:\\WorkSpace\\net\\microservice\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
       "projectName": "microservice_sketch",
-      "projectPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
+      "projectPath": "C:\\WorkSpace\\net\\microservice\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
       "packagesPath": "C:\\Users\\vesper\\.nuget\\packages\\",
-      "outputPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\obj\\",
+      "outputPath": "C:\\WorkSpace\\net\\microservice\\microservice_sketch\\microservice_sketch\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
