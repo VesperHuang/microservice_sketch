@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
+
 namespace microservice_sketch.Models
 {
     public class user
     {
-        public int id { get; set; }
+        [Key]
+        public int user_id { get; set; }
 
+        [StringLength(20)]
         public string name { get; set; }
 
         public string account { get; set; }
@@ -20,5 +25,7 @@ namespace microservice_sketch.Models
         public string email { get; set; }
 
         public string ip { get; set; }
+
+        public virtual List<user_role> roles { get; set; }
     }
 }

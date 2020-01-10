@@ -7,6 +7,6 @@ namespace microservice_sketch.Services
 {
     public interface IApiService
     {
-        public void info(string function_name);
+        public void info(string function_name);		
     }
 }

@@ -1,9 +1,6 @@
-﻿using System;
+﻿using microservice_sketch.Services;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-using microservice_sketch.Services;
 
 namespace microservice_sketch.Models
 {
@@ -20,7 +17,9 @@ namespace microservice_sketch.Models
 
             foreach (var service in apiServices)
             {
-                if (service.ToString() == service_name)
+                var key = service.ToString().Split('.')[service.ToString().Split('.').Length - 1];
+
+                if (key == service_name)
                 {
                     result = service;
                     break;

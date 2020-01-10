@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\WorkSpace\\net\\microservice\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj": {}
+    "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj": {}
   },
   "projects": {
-    "C:\\WorkSpace\\net\\microservice\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj": {
+    "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\WorkSpace\\net\\microservice\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
+        "projectUniqueName": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
         "projectName": "microservice_sketch",
-        "projectPath": "C:\\WorkSpace\\net\\microservice\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
+        "projectPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
         "packagesPath": "C:\\Users\\vesper\\.nuget\\packages\\",
-        "outputPath": "C:\\WorkSpace\\net\\microservice\\microservice_sketch\\microservice_sketch\\obj\\",
+        "outputPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -42,21 +42,71 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AspectCore.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "AspectCore.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "Dapper": {
               "target": "Package",
               "version": "[2.0.30, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.Extensions.Caching.Redis": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.Extensions.Http.Polly": {
               "target": "Package",
               "version": "[3.1.0, )"
             },
-            "MySql.Data": {
+            "Microsoft.Extensions.Primitives": {
               "target": "Package",
-              "version": "[8.0.18, )"
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             },
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[4.9.0, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.6.0, )"
             }
           },
           "imports": [

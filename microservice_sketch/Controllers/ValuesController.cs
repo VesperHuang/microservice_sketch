@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-
-
-using kooco.common.models;
+﻿using kooco.common.models;
 using microservice_sketch.Models;
 using microservice_sketch.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using System;
+using System.Collections.Generic;
 
 namespace microservice_sketch.Controllers
 {
@@ -20,12 +14,41 @@ namespace microservice_sketch.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly api_settings _api_settings;
+        private HealthCheckService _health_check_service;
+
         public ValuesController(IEnumerable<IApiService> apiServices,IOptionsSnapshot<api_settings> options) {
             _api_settings = options.Value;
 
+            #region example how to get instance in IEnumerable<IApiService>
             //get service instance
-            IApiService instance = service_data_repository.get_service(apiServices, "microservice_sketch.Services.AopService");
-            instance.info("get instance from apiServices");
+            //IApiService instance = service_data_repository.get_service(apiServices, "AopService");
+            //instance.info("get instance from apiServices");
+
+            //INlogService nLog_instance = (INlogService)service_data_repository.get_service(apiServices, "NlogService");
+            //nLog_instance.info("NLog use info test here is values controller comstruct");
+            //nLog_instance.fatal("NLog use fatal test here is values controller comstruct");
+            #endregion
+
+            _health_check_service = (HealthCheckService)service_data_repository.get_service(apiServices, "HealthCheckService");
+        }
+
+        /// <summary>
+        ///     make exception to test HealthCheckService
+        /// </summary>
+        /// <returns></returns>
+        [AllowAnonymous]
+        [HttpPost("/make_exception")]
+        public IActionResult make_exceptin()
+        {
+            try
+            {
+                throw new Exception("from make_exception");
+            }
+            catch (Exception ex)
+            {               
+                this._health_check_service.write_exception("exception_level_1",ex.Message.ToString());
+                return BadRequest("service exception");
+            }
         }
 
         // GET api/values

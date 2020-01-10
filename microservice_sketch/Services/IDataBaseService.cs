@@ -14,6 +14,9 @@ namespace microservice_sketch.Services
         public void addUser(user _user);
     }
 
+    /// <summary>
+    /// it's not use current use entity framework
+    /// </summary>
     public class DataBase: IDataBase, IApiService
     {
         MySqlConnection mySqlConnection = null;
@@ -34,6 +37,10 @@ namespace microservice_sketch.Services
         {
             Console.WriteLine("dataBase Service info " + function_name);
         }
+
+        //public string get_data(int id) {
+        //    return "";
+        //}
 
     }
 }

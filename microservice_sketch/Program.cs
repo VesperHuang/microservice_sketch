@@ -8,6 +8,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
 using NLog.Web;
+using AspectCore.Extensions.Hosting;
 
 namespace microservice_sketch
 {
@@ -32,6 +33,10 @@ namespace microservice_sketch
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .UseServiceContext()
+                .ConfigureDynamicProxy((service,config) => {
+
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
