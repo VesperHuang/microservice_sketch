@@ -1,6 +1,8 @@
 ﻿using microservice_sketch.Services;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace microservice_sketch.Models
 {
@@ -50,6 +52,33 @@ namespace microservice_sketch.Models
                         break;
                 }
             }
+        }
+
+
+        public static string get_user_data(DBContext dbContext,string account)
+        {
+            var result = string.Empty;
+
+            var user = (from u in dbContext.user
+                        join r in dbContext.user_role on u.user_id equals r.user_id
+                        where u.account == account
+                        select new
+                        {
+                            r.role_type,
+                            u.account,
+                            u.name,
+                            u.mobile,
+                            u.email,
+                            u.ip
+                        }).FirstOrDefault();
+
+            result = JsonConvert.SerializeObject(user);
+            return result;
+        }
+
+        public void info(string function_name)
+        {
+            Console.WriteLine("service_data_repository info " + function_name);
         }
 
         #region dispose

@@ -4,6 +4,8 @@ using Microsoft.Extensions.Caching.Redis;
 using Microsoft.Extensions.Configuration;
 using System;
 
+using Microsoft.AspNetCore.DataProtection;
+
 namespace microservice_sketch.Services
 {
     public class RedisService
@@ -13,18 +15,29 @@ namespace microservice_sketch.Services
 
         public RedisService()
         {
-            IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Environment.CurrentDirectory)
-                                                         .AddJsonFile($"appsettings.json", optional: true, reloadOnChange: true)
-                                                         .Build();
-
-            _api_settings = new api_settings();
-            configuration.GetSection("api_settings").Bind(_api_settings);
-
+            _api_settings = Startup.api_settings;
             var redis_info = _api_settings.storage[1];
+
+            #region No DI type encrypt example
+            //var dataProtectionProvider = DataProtectionProvider.Create("redis");
+            //var protector = dataProtectionProvider.CreateProtector("redis");
+
+            //var type = redis_info.server.ToString();
+            //var type_encrypt = protector.Protect(type);
+
+            //var server = redis_info.server.ToString();
+            //var server_encrypt = protector.Protect(server);
+
+            //var port = redis_info.server.ToString();
+            //var port_encrypt = protector.Protect(port);
+
+            //var db_name = redis_info.server.ToString();
+            //var db_name_encrypt = protector.Protect(db_name);            
+            #endregion
 
             _redis_cache = new RedisCache(new RedisCacheOptions()
             {
-                Configuration = redis_info.server.ToString(),
+                Configuration = redis_info.server,
                 InstanceName = redis_info.db_name
             });
         }

@@ -20,13 +20,7 @@ namespace microservice_sketch.Services
         ///     default:passive
         /// </summary>
         public MemoryCacheService() {
-            IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Environment.CurrentDirectory)
-                                                                     .AddJsonFile($"appsettings.json", optional: true, reloadOnChange: true)
-                                                                     .Build();
-
-            _api_settings = new api_settings();
-            configuration.GetSection("api_settings").Bind(_api_settings);
-
+            _api_settings = Startup.api_settings;
             _memory_cache = _api_settings.memory_cache;
 
             cache = new MemoryCache(new MemoryCacheOptions()

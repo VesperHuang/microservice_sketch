@@ -6,6 +6,9 @@ using microservice_sketch.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -15,12 +18,15 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Polly;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
@@ -35,23 +41,72 @@ namespace microservice_sketch
         {
             Configuration = configuration;
 
+            #region api_settings set data
             _api_settings = new api_settings();
             Configuration.GetSection("api_settings").Bind(_api_settings);
+
+            //use secrets.json to behide secret's data 
+            dataBase MySqlConfig = Configuration.GetSection("MySQL").Get<dataBase>();
+            dataBase RedisConfig = Configuration.GetSection("Redis").Get<dataBase>();
+
+            List<dataBase> storage = new List<dataBase>();
+            storage.Add(MySqlConfig);
+            storage.Add(RedisConfig);
+            _api_settings.storage = storage;
+
+            token token  = Configuration.GetSection("token").Get<token>();
+            _api_settings.token = token;
+            #endregion
+
+            //export api_settings
+            api_settings = _api_settings;
         }
 
         public IConfiguration Configuration { get; }
 
+        public static api_settings api_settings { get; private set; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region data encrypt decrypt 
+            //services.AddDataProtection()
+            //    //.PersistKeysToFileSystem(new DirectoryInfo(@"dataProtection")); //save private key
+            //    .UseCryptographicAlgorithms(new AuthenticatedEncryptorConfiguration()
+            //     {
+            //         EncryptionAlgorithm = EncryptionAlgorithm.AES_256_GCM,
+            //         ValidationAlgorithm = ValidationAlgorithm.HMACSHA256
+            //     })
+            //    .SetApplicationName("MyCommonName");
+            ////services.AddSingleton<IApiService, EncryptionService>();
 
+            //var service_proivder = services.BuildServiceProvider();
+            //var instance = ActivatorUtilities.CreateInstance<EncryptionService>(service_proivder);
+            //var server = instance.Encrypt(_api_settings.storage[0].server);
+            #endregion
+
+            //at appsetting.json to setting the function will be used
             #region health check
-            //exception message collection 
-            services.AddSingleton<exception_collection>();
+            if (_api_settings.health_switch) {
 
-            services.AddHealthChecks()
-                    .AddServiceHealthCheck();
-            services.AddSingleton<IApiService, microservice_sketch.Services.HealthCheckService>();
+                //exception message collection 
+                services.AddSingleton<exception_collection>();
+
+                services.AddHealthChecks()
+                        .AddServiceHealthCheck();
+                services.AddSingleton<IApiService, microservice_sketch.Services.HealthCheckService>();
+
+                //auto health publisher
+                if (_api_settings.health_publisher)
+                {
+                    services.Configure<HealthCheckPublisherOptions>(options =>
+                    {
+                        options.Delay = TimeSpan.FromSeconds(5);
+                        options.Period = TimeSpan.FromSeconds(20);
+                    });
+                    services.AddSingleton<IHealthCheckPublisher, ReadinessPublisher>();
+                }
+            }
             #endregion
 
             #region token role
@@ -100,7 +155,6 @@ namespace microservice_sketch
             services.AddSingleton(permissionRequirement);
             #endregion
 
-            //at appsetting.json to setting the function will be used
             if (_api_settings.memory_type.ToLower() == "memory") {
                 services.AddSingleton<MemoryCacheService>();
                 services.AddScoped<IApiService, AopService>();
@@ -113,11 +167,11 @@ namespace microservice_sketch
             }
 
             if (_api_settings.dataBase_switch) {
-                services.AddScoped<IApiService, DataBase>();
+                //ADO Type
+                //services.AddScoped<IApiService, DataBase>();
 
                 services.AddDbContext<DBContext>(options =>
                 {
-
                     //here need add function to get different storage type
                     var _connection_string = _api_settings.storage[0].get_connection_string;    
                     
@@ -126,6 +180,8 @@ namespace microservice_sketch
                         mysqlOptions.ServerVersion(new Version(14, 14), Pomelo.EntityFrameworkCore.MySql.Infrastructure.ServerType.MySql);
                     });
                 });
+
+                //services.AddSingleton<Iservice_data_repository, service_data_repository>();
             }
 
             if (_api_settings.nlogger_switch)
@@ -152,19 +208,72 @@ namespace microservice_sketch
                 .AddSessionStateTempDataProvider();
 
             services.AddSession();
+
+            #region Swagger
+            //https://code-maze.com/swagger-ui-asp-net-core-web-api/
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo
+                {
+                    Title = "Microservice Sketch API",
+                    Version = "v1",
+                    Description = "An API to perform Microservice Sketch operations",
+                    TermsOfService = new Uri("http://www.kooco.co/"),
+                    Contact = new OpenApiContact
+                    {
+                        Name = "Vesper Huang",
+                        Email = "vesper@kooco.com.tw",
+                        Url = new Uri("https://twitter.com/"),
+                    },
+                    License = new OpenApiLicense
+                    {
+                        Name = "Microservice Sketch API",
+                        Url = new Uri("https://example.com/license"),
+                    }
+                });
+
+                //add token to swagger header
+                c.AddSecurityDefinition("Authorization", new OpenApiSecurityScheme()
+                {
+                    Type = SecuritySchemeType.ApiKey,
+                    In = ParameterLocation.Header,
+                    Name = "Authorization",
+                    Description = "Example:Bearer eyJhbGciOi...",
+                });
+
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference { Type = ReferenceType.SecurityScheme, Id = "Authorization" }
+                        },
+                        new string[] { }
+                    }
+                });
+
+                // Set the comments path for the Swagger JSON and UI.
+                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                c.IncludeXmlComments(xmlPath);
+            });
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DBContext dbContext)
         {
-            app.UseHealthChecks("/health", 8000, new HealthCheckOptions()
-            {
-                ResponseWriter = WriteResponse,
-            });
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+
+            if (_api_settings.health_switch)
+            {
+                app.UseHealthChecks("/health", 8000, new HealthCheckOptions()
+                {
+                    ResponseWriter = WriteResponse,
+                });
             }
 
             app.UseSession();
@@ -175,8 +284,20 @@ namespace microservice_sketch
             //{
             //    app.UseAOP();
             //}
-
             app.UseAuthentication();
+
+            #region Swagger
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+            #endregion 
+
             app.UseRouting();
             app.UseAuthorization();
             app.UseMvcWithDefaultRoute();
@@ -199,7 +320,7 @@ namespace microservice_sketch
                     name = "kooco admin",
                     account = "kooco_admin",
                     password = "abc12345",
-                    mobile = "0937000000",
+                    mobile = "0900000000",
                     email = "admin@kooco.com.tw",
                     ip = "10.10.1.65",
                 };

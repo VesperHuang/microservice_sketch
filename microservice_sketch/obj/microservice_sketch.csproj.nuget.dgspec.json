@@ -4,14 +4,14 @@
     "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj": {}
   },
   "projects": {
-    "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj": {
+    "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\kooco.common.models\\kooco.common.models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
-        "projectName": "microservice_sketch",
-        "projectPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
+        "projectUniqueName": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\kooco.common.models\\kooco.common.models.csproj",
+        "projectName": "kooco.common.models",
+        "projectPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\kooco.common.models\\kooco.common.models.csproj",
         "packagesPath": "C:\\Users\\vesper\\.nuget\\packages\\",
-        "outputPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\obj\\",
+        "outputPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\kooco.common.models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,66 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
+        "projectName": "microservice_sketch",
+        "projectPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\microservice_sketch.csproj",
+        "packagesPath": "C:\\Users\\vesper\\.nuget\\packages\\",
+        "outputPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\microservice_sketch\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\vesper\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://kooco-nuget.azurewebsites.net/nuget/": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\kooco.common.models\\kooco.common.models.csproj": {
+                "projectPath": "C:\\WorkSpace\\Kooco\\microservice_sketch\\microservice_sketch\\kooco.common.models\\kooco.common.models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
           "dependencies": {
             "AspectCore.Extensions.DependencyInjection": {
               "target": "Package",
@@ -55,6 +115,10 @@
               "version": "[2.0.30, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "Microsoft.AspNetCore.DataProtection": {
               "target": "Package",
               "version": "[3.1.0, )"
             },
@@ -103,6 +167,10 @@
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
               "version": "[3.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0-rc5, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

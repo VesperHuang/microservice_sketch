@@ -8,6 +8,12 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
+using kooco.common.models;
+using microservice_sketch.Models.DataTransferObjects;
+using microservice_sketch.Models.DataTransferObjects.Response;
+using microservice_sketch.Models.DataTransferObjects.Request;
+using microservice_sketch.Models.Shared;
+
 using microservice_sketch.Models;
 namespace microservice_sketch.Services
 {
@@ -30,6 +36,18 @@ namespace microservice_sketch.Services
             if (this._exception_collection.Count >= 1)
             {
                 //int exception_level_1 = _exception_collection["exception_level_1"].Count;
+
+                #region call slack notify
+                api_settings _api_settings = Startup.api_settings;
+                if (_api_settings.health_slack_notify)
+                {
+                    SlackNotifyDTO para = new SlackNotifyDTO();
+                    para.Channel = "pinetree";
+                    para.Json = (object)"{'message':'test slack notify from health check service'}";
+
+                    Utils.PostJsonMessageToSlackChannel(para);
+                }
+                #endregion
                 return Task.FromResult(HealthCheckResult.Unhealthy("不健康"));
             }
             else

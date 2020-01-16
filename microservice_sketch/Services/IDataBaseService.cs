@@ -15,7 +15,7 @@ namespace microservice_sketch.Services
     }
 
     /// <summary>
-    /// it's not use current use entity framework
+    /// it's not use, current use entity framework
     /// </summary>
     public class DataBase: IDataBase, IApiService
     {
@@ -35,7 +35,7 @@ namespace microservice_sketch.Services
 
         public void info(string function_name)
         {
-            Console.WriteLine("dataBase Service info " + function_name);
+            Console.WriteLine("dataBase Service Info " + function_name);
         }
 
         //public string get_data(int id) {

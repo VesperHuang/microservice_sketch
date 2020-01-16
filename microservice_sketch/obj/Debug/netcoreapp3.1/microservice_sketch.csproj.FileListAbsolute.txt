@@ -173,4 +173,21 @@ C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\b
 C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Redis.dll
 C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\bin\Debug\netcoreapp3.1\StackExchange.Redis.StrongName.dll
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\nlog.config
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\appsettings.Development.json
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\appsettings.json
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\Properties\launchSettings - 複製.json
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\Properties\launchSettings.json
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\microservice_sketch.exe
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\microservice_sketch.deps.json
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\microservice_sketch.runtimeconfig.json
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\microservice_sketch.runtimeconfig.dev.json
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\microservice_sketch.dll
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\microservice_sketch.pdb
+C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\microservice_sketch.xml
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\obj\Debug\netcoreapp3.1\microservice_sketch.MvcApplicationPartsAssemblyInfo.cs
 C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\obj\Debug\netcoreapp3.1\microservice_sketch.MvcApplicationPartsAssemblyInfo.cache

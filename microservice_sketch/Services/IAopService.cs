@@ -1,5 +1,6 @@
 ﻿using AspectCore.DynamicProxy;
 using kooco.common.models;
+using microservice_sketch.Models;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
@@ -13,7 +14,6 @@ namespace microservice_sketch.Services
     public interface IAopService
     {
         void print(string write_something);
-
 
         [CacheInterceptorAtrribute]
         string cache_user_data(string account);
@@ -44,31 +44,11 @@ namespace microservice_sketch.Services
 
         public string cache_user_data(string account)
         {
-            return this.get_user_data(account);
+            return service_data_repository.get_user_data(_dbContext,account);
         }
 
         public string redis_user_data(string account) {
-            return this.get_user_data(account);
-        }
-
-        private string get_user_data(string account) {
-            var result = string.Empty;
-
-            var user = (from u in _dbContext.user
-                        join r in _dbContext.user_role on u.user_id equals r.user_id
-                        where u.account == account
-                        select new
-                        {
-                            r.role_type,
-                            u.account,
-                            u.name,
-                            u.mobile,
-                            u.email,
-                            u.ip
-                        }).FirstOrDefault();
-
-            result = JsonConvert.SerializeObject(user);
-            return result;
+            return service_data_repository.get_user_data(_dbContext, account);
         }
     }
 
@@ -105,17 +85,8 @@ namespace microservice_sketch.Services
 
         public CacheInterceptorAtrribute()
         {
-
-            #region dirty code the same code in the MemoryCasheService.cs
-            //here to get cache define
-            IConfiguration configuration = new ConfigurationBuilder().SetBasePath(Environment.CurrentDirectory)
-                                                                     .AddJsonFile($"appsettings.json", optional: true, reloadOnChange: true)
-                                                                     .Build();
-
-            _api_settings = new api_settings();
-            configuration.GetSection("api_settings").Bind(_api_settings);
+            _api_settings = Startup.api_settings;
             _memory_cache = _api_settings.memory_cache;
-            #endregion
 
             var instance = Activator.CreateInstance(type: typeof(MemoryCacheService)) as MemoryCacheService;
             _cache = instance.cache;

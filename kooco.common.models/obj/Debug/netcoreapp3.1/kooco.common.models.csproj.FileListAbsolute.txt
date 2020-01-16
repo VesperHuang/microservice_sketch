@@ -1,0 +1,8 @@
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\kooco.common.models\bin\Debug\netcoreapp3.1\kooco.common.models.deps.json
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\kooco.common.models\bin\Debug\netcoreapp3.1\kooco.common.models.dll
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\kooco.common.models\bin\Debug\netcoreapp3.1\kooco.common.models.pdb
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\kooco.common.models\obj\Debug\netcoreapp3.1\kooco.common.models.csprojAssemblyReference.cache
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\kooco.common.models\obj\Debug\netcoreapp3.1\kooco.common.models.AssemblyInfoInputs.cache
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\kooco.common.models\obj\Debug\netcoreapp3.1\kooco.common.models.AssemblyInfo.cs
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\kooco.common.models\obj\Debug\netcoreapp3.1\kooco.common.models.dll
+C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\kooco.common.models\obj\Debug\netcoreapp3.1\kooco.common.models.pdb

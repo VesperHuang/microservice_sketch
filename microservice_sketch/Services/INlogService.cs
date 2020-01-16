@@ -24,11 +24,6 @@ namespace microservice_sketch.Services
             var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
             logger.Fatal(write_something);
         }
-
-        //public string get_data(int id)
-        //{
-        //    return "";
-        //}
     }
 
 }
