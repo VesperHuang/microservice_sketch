@@ -9,6 +9,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Debug;
+
 namespace microservice_sketch.Controllers
 {
     [Authorize(Policy = "Permission")]
@@ -21,7 +24,11 @@ namespace microservice_sketch.Controllers
         private HealthCheckService _health_check_service;
         private DBContext _dbContext;
 
-        public UserCenterController(IEnumerable<IApiService> apiServices, PermissionRequirement permissionRequirement, DBContext dbContext) {
+        private INlogService _nLog_instance;
+
+        private readonly ILogger<UserCenterController> _logger;
+
+        public UserCenterController(IEnumerable<IApiService> apiServices, PermissionRequirement permissionRequirement, DBContext dbContext,ILogger<UserCenterController> logger) {
             _permissionRequirement = permissionRequirement;
             _dbContext = dbContext;
 
@@ -31,12 +38,16 @@ namespace microservice_sketch.Controllers
             //IApiService instance = service_data_repository.get_service(apiServices, "AopService");
             //instance.info("get instance from apiServices");
 
-            //INlogService nLog_instance = (INlogService)service_data_repository.get_service(apiServices, "NlogService");
-            //nLog_instance.info("NLog use info test here is values controller comstruct");
-            //nLog_instance.fatal("NLog use fatal test here is values controller comstruct");
+            INlogService nLog_instance = (INlogService)service_data_repository.get_service(apiServices, "NlogService");
+            _nLog_instance = nLog_instance;
+
+            _nLog_instance.info("NLog use info test here is values controller comstruct");
+            _nLog_instance.fatal("NLog use fatal test here is values controller comstruct");
             #endregion
 
             _health_check_service = (HealthCheckService)service_data_repository.get_service(apiServices, "HealthCheckService");
+
+            _logger = logger;
         }
 
         [AllowAnonymous]
@@ -86,6 +97,25 @@ namespace microservice_sketch.Controllers
         {
             try
             {
+                // var loggerFactory = LoggerFactory.Create(builder =>
+                // {
+                //     builder
+                //         //.AddFilter("microservice_sketch.Controllers", LogLevel.Debug)
+                //         .AddConsole()
+                //         .AddDebug();
+                // });
+                // ILogger logger = loggerFactory.CreateLogger<UserCenterController>();
+                // logger.LogInformation("creater logger ============> log information");            
+                // logger.LogDebug("creater logger ============> log debug");     
+
+                _logger.LogTrace("logger ============> Trace");
+                _logger.LogCritical("logger ============> Critical");
+                _logger.LogDebug("logger ============> Debug");
+                _logger.LogWarning("logger ============> Warning");
+                _logger.LogInformation("logger ============> Information");
+                _logger.LogError("logger ============> Error");                  
+
+
                 HttpContext.Items.TryGetValue("cache_user_data", out var middleware_value);
                 var result = middleware_value?.ToString() ?? "";
 
@@ -98,7 +128,7 @@ namespace microservice_sketch.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine("login faild error message:{0}", ex.Message.ToString());
+                _nLog_instance.fatal("login faild error message:" + ex.Message.ToString());
                 return BadRequest("service exception");
             }
         }

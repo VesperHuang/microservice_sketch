@@ -16,7 +16,7 @@ namespace microservice_sketch
     {
         public static void Main(string[] args)
         {
-            var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+            var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog_win.config").GetCurrentClassLogger();
             try
             {
                 logger.Info(" start nLog");
@@ -39,7 +39,14 @@ namespace microservice_sketch
                 })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    var configuration = new ConfigurationBuilder().SetBasePath(Environment.CurrentDirectory)
+                                                                .AddJsonFile("hosts.json")
+                                                                .Build();
+
+                    webBuilder.UseConfiguration(configuration);
+
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseNLog();
                 });
     }
 }

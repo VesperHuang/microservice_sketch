@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>microservice_sketch</id>
+    <version>1.0.0</version>
+    <authors>vesper</authors>
+    <owners>vesper</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.1">
+        <dependency id="kooco.common.models" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="AspectCore.Extensions.DependencyInjection" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="AspectCore.Extensions.Hosting" version="2.0.0" exclude="Build,Analyzers" />
+        <dependency id="Dapper" version="2.0.30" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication.JwtBearer" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.DataProtection" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Relational" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.SqlServer" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Caching.Redis" version="2.2.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Http.Polly" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Primitives" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.IdentityModel.Tokens" version="5.6.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.VisualStudio.Web.CodeGeneration.Design" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="NLog.Web.AspNetCore" version="4.9.0" exclude="Build,Analyzers" />
+        <dependency id="Pomelo.EntityFrameworkCore.MySql" version="3.1.0" exclude="Build,Analyzers" />
+        <dependency id="Swashbuckle.AspNetCore" version="5.0.0" exclude="Build,Analyzers" />
+        <dependency id="System.IdentityModel.Tokens.Jwt" version="5.6.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework=".NETCoreApp3.1">
+        <frameworkReference name="Microsoft.AspNetCore.App" />
+      </group>
+    </frameworkReferences>
+    <contentFiles>
+      <files include="any/netcoreapp3.1/nlog.config" buildAction="Content" />
+      <files include="any/netcoreapp3.1/appsettings.Development.json" buildAction="Content" />
+      <files include="any/netcoreapp3.1/appsettings.json" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Properties/launchSettings - 複製.json" buildAction="Content" />
+      <files include="any/netcoreapp3.1/Properties/launchSettings.json" buildAction="Content" />
+    </contentFiles>
+  </metadata>
+  <files>
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\microservice_sketch.runtimeconfig.json" target="lib\netcoreapp3.1\microservice_sketch.runtimeconfig.json" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\microservice_sketch.dll" target="lib\netcoreapp3.1\microservice_sketch.dll" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\output\netcoreapp3.1\microservice_sketch.xml" target="lib\netcoreapp3.1\microservice_sketch.xml" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.microservice_sketch.Microsoft.AspNetCore.StaticWebAssets.props" target="build\Microsoft.AspNetCore.StaticWebAssets.props" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.microservice_sketch.props" target="build\microservice_sketch.props" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.microservice_sketch.props" target="buildMultiTargeting\microservice_sketch.props" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.microservice_sketch.props" target="buildTransitive\microservice_sketch.props" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\custom.css" target="staticwebassets\swagger\ui\custom.css" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\favicon-16x16.png" target="staticwebassets\swagger\ui\favicon-16x16.png" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\favicon-32x32.png" target="staticwebassets\swagger\ui\favicon-32x32.png" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\index.html" target="staticwebassets\swagger\ui\index.html" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\oauth2-redirect.html" target="staticwebassets\swagger\ui\oauth2-redirect.html" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\swagger-ui-bundle.js" target="staticwebassets\swagger\ui\swagger-ui-bundle.js" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\swagger-ui-bundle.js.map" target="staticwebassets\swagger\ui\swagger-ui-bundle.js.map" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\swagger-ui-standalone-preset.js" target="staticwebassets\swagger\ui\swagger-ui-standalone-preset.js" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\swagger-ui-standalone-preset.js.map" target="staticwebassets\swagger\ui\swagger-ui-standalone-preset.js.map" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\swagger-ui.css" target="staticwebassets\swagger\ui\swagger-ui.css" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\swagger-ui.css.map" target="staticwebassets\swagger\ui\swagger-ui.css.map" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\swagger-ui.js" target="staticwebassets\swagger\ui\swagger-ui.js" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\wwwroot\swagger\ui\swagger-ui.js.map" target="staticwebassets\swagger\ui\swagger-ui.js.map" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\nlog.config" target="content\nlog.config" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\nlog.config" target="contentFiles\any\netcoreapp3.1\nlog.config" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\appsettings.Development.json" target="content\appsettings.Development.json" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\appsettings.Development.json" target="contentFiles\any\netcoreapp3.1\appsettings.Development.json" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\appsettings.json" target="content\appsettings.json" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\appsettings.json" target="contentFiles\any\netcoreapp3.1\appsettings.json" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\Properties\launchSettings - 複製.json" target="content\Properties\launchSettings - 複製.json" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\Properties\launchSettings - 複製.json" target="contentFiles\any\netcoreapp3.1\Properties\launchSettings - 複製.json" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\Properties\launchSettings.json" target="content\Properties\launchSettings.json" />
+    <file src="C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch\Properties\launchSettings.json" target="contentFiles\any\netcoreapp3.1\Properties\launchSettings.json" />
+  </files>
+</package>

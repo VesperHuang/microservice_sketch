@@ -21,6 +21,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using NLog.Web;
 using Polly;
 using System;
 using System.Collections.Generic;
@@ -44,18 +45,63 @@ namespace microservice_sketch
             #region api_settings set data
             _api_settings = new api_settings();
             Configuration.GetSection("api_settings").Bind(_api_settings);
+            #endregion
 
-            //use secrets.json to behide secret's data 
-            dataBase MySqlConfig = Configuration.GetSection("MySQL").Get<dataBase>();
-            dataBase RedisConfig = Configuration.GetSection("Redis").Get<dataBase>();
+            #region Encrypt secret words
+            //var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+            //var logger = NLog.Web.NLogBuilder.ConfigureNLog("nlog_win.config").GetCurrentClassLogger();
 
-            List<dataBase> storage = new List<dataBase>();
-            storage.Add(MySqlConfig);
-            storage.Add(RedisConfig);
-            _api_settings.storage = storage;
+            // dataBase MySqlConfig = Configuration.GetSection("MySQL").Get<dataBase>();
+            // string storage_type = kooco.common.utils.tools.EncryptAES(MySqlConfig.type);
+            // string server = kooco.common.utils.tools.EncryptAES(MySqlConfig.server);
+            // string port = kooco.common.utils.tools.EncryptAES(MySqlConfig.port);
+            // string user_id = kooco.common.utils.tools.EncryptAES(MySqlConfig.user_id);
+            // string password = kooco.common.utils.tools.EncryptAES(MySqlConfig.password);
+            // string db_name = kooco.common.utils.tools.EncryptAES(MySqlConfig.db_name);
 
-            token token  = Configuration.GetSection("token").Get<token>();
-            _api_settings.token = token;
+            // logger.Info("MySQL type=" + storage_type);
+            // logger.Info("MySQL server=" + server);
+            // logger.Info("MySQL port=" + port);
+            // logger.Info("MySQL user_id=" + user_id);
+            // logger.Info("MySQL password=" + password);
+            // logger.Info("MySQL db_name=" + db_name);
+
+            // dataBase RedisConfig = Configuration.GetSection("Redis").Get<dataBase>();
+            // string storage_type = kooco.common.utils.tools.EncryptAES(RedisConfig.type,strKey,strIV);
+            // string server = kooco.common.utils.tools.EncryptAES(RedisConfig.server,strKey,strIV);
+            // string port = kooco.common.utils.tools.EncryptAES(RedisConfig.port,strKey,strIV);
+            // string user_id = kooco.common.utils.tools.EncryptAES(RedisConfig.user_id,strKey,strIV);
+            // string password = kooco.common.utils.tools.EncryptAES(RedisConfig.password,strKey,strIV);
+            // string db_name = kooco.common.utils.tools.EncryptAES(RedisConfig.db_name,strKey,strIV);
+
+            // logger.Info("Redis type=" + storage_type);
+            // logger.Info("Redis server=" + server);
+            // logger.Info("Redis port=" + port);
+            // logger.Info("Redis user_id=" + user_id);
+            // logger.Info("Redis password=" + password);
+            // logger.Info("Redis db_name=" + db_name);
+
+            // token token  = Configuration.GetSection("token").Get<token>();         
+            // string secret = kooco.common.utils.tools.EncryptAES(token.secret,strKey,strIV);
+            // string issuer = kooco.common.utils.tools.EncryptAES(token.issuer,strKey,strIV);
+            // string audience = kooco.common.utils.tools.EncryptAES(token.audience,strKey,strIV);
+
+            // logger.Info("token secret=" + secret);
+            // logger.Info("token issuer=" + issuer);
+            // logger.Info("token audience=" + audience);               
+            #endregion
+
+            #region use secrets.json to behide secret's data 
+            // dataBase MySqlConfig = Configuration.GetSection("MySQL").Get<dataBase>();
+            // dataBase RedisConfig = Configuration.GetSection("Redis").Get<dataBase>();
+        
+            // List<dataBase> storage = new List<dataBase>();
+            // storage.Add(MySqlConfig);
+            // storage.Add(RedisConfig);
+            // _api_settings.storage = storage;
+
+            // token token  = Configuration.GetSection("token").Get<token>();
+            // _api_settings.token = token;
             #endregion
 
             //export api_settings
@@ -263,6 +309,16 @@ namespace microservice_sketch
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DBContext dbContext)
         {
+
+            #region Nlog
+            //NLog.LogManager.LoadConfiguration("nlog.config").GetCurrentClassLogger();      
+            NLog.LogManager.LoadConfiguration("nlog_win.config").GetCurrentClassLogger();                  
+
+            NLog.LogManager.Configuration.Variables["connectionString"] = _api_settings.storage[0].get_connection_string;   
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance); 
+            #endregion
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -351,5 +407,6 @@ namespace microservice_sketch
             return httpContext.Response.WriteAsync(
                 json.ToString(Formatting.Indented));
         }
+    
     }
 }

@@ -1,0 +1,624 @@
+2020-01-30 11:05:03.0169||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 11:05:07.7747||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager 
+User profile is available. Using 'C:\Users\vesper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.  
+
+2020-01-30 11:05:08.4476||INFO|Microsoft.EntityFrameworkCore.Infrastructure 
+Entity Framework Core 3.1.0 initialized 'DBContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 14.14 MySql   
+
+2020-01-30 11:05:08.6240||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+                    SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+                    FROM information_schema.tables
+                    WHERE table_type = 'BASE TABLE' AND table_schema = 'microservice'  
+
+2020-01-30 11:05:08.8013||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `user` AS `u`  
+
+2020-01-30 11:05:08.8583||INFO|Microsoft.Hosting.Lifetime 
+Now listening on: http://0.0.0.0:5002  
+
+2020-01-30 11:05:08.8583||INFO|Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.  
+
+2020-01-30 11:05:08.8583||INFO|Microsoft.Hosting.Lifetime 
+Hosting environment: Development  
+
+2020-01-30 11:05:08.8583||INFO|Microsoft.Hosting.Lifetime 
+Content root path: C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch  
+
+2020-01-30 11:05:12.8483||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:05:12 Readiness Publisher : Healthy,00:00:00.0141987,1  
+
+2020-01-30 11:05:32.8253||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:05:32 Readiness Publisher : Healthy,00:00:00.0017920,1  
+
+2020-01-30 11:05:52.8138||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:05:52 Readiness Publisher : Healthy,00:00:00.0008745,1  
+
+2020-01-30 11:06:12.8253||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:06:12 Readiness Publisher : Healthy,00:00:00.0007072,1  
+
+2020-01-30 11:06:32.8140||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:06:32 Readiness Publisher : Healthy,00:00:00.0008299,1  
+
+2020-01-30 11:06:52.8145||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:06:52 Readiness Publisher : Healthy,00:00:00.0008976,1  
+
+2020-01-30 11:07:12.8140||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:07:12 Readiness Publisher : Healthy,00:00:00.0007511,1  
+
+2020-01-30 11:07:32.8254||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:07:32 Readiness Publisher : Healthy,00:00:00.0007412,1  
+
+2020-01-30 11:07:52.8143||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:07:52 Readiness Publisher : Healthy,00:00:00.0012377,1  
+
+2020-01-30 11:08:12.8129||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:08:12 Readiness Publisher : Healthy,00:00:00.0005293,1  
+
+2020-01-30 11:08:32.8259||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:08:32 Readiness Publisher : Healthy,00:00:00.0006335,1  
+
+2020-01-30 11:08:52.8155||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:08:52 Readiness Publisher : Healthy,00:00:00.0010217,1  
+
+2020-01-30 11:09:12.8248||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:09:12 Readiness Publisher : Healthy,00:00:00.0005716,1  
+
+2020-01-30 11:09:32.8247||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:09:32 Readiness Publisher : Healthy,00:00:00.0007161,1  
+
+2020-01-30 11:09:39.1456||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 11:09:52.8238||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:09:52 Readiness Publisher : Healthy,00:00:00.0004801,1  
+
+2020-01-30 11:10:12.8250||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:10:12 Readiness Publisher : Healthy,00:00:00.0006284,1  
+
+2020-01-30 11:10:32.8145||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:10:32 Readiness Publisher : Healthy,00:00:00.0004350,1  
+
+2020-01-30 11:10:33.7636||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager 
+User profile is available. Using 'C:\Users\vesper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.  
+
+2020-01-30 11:10:34.6265||INFO|Microsoft.EntityFrameworkCore.Infrastructure 
+Entity Framework Core 3.1.0 initialized 'DBContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 14.14 MySql   
+
+2020-01-30 11:10:34.8159||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (23ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+                    SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+                    FROM information_schema.tables
+                    WHERE table_type = 'BASE TABLE' AND table_schema = 'microservice'  
+
+2020-01-30 11:10:35.0009||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `user` AS `u`  
+
+2020-01-30 11:10:35.0974||FATAL|Microsoft.AspNetCore.Server.Kestrel 
+Unable to start Kestrel. Failed to bind to address http://0.0.0.0:5002: address already in use. 
+
+2020-01-30 11:10:35.1331||FATAL|microservice_sketch.Program 
+ start nLog exceptionFailed to bind to address http://0.0.0.0:5002: address already in use. Failed to bind to address http://0.0.0.0:5002: address already in use. 
+
+2020-01-30 11:10:52.8139||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:10:52 Readiness Publisher : Healthy,00:00:00.0004379,1  
+
+2020-01-30 11:11:12.8144||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:11:12 Readiness Publisher : Healthy,00:00:00.0005132,1  
+
+2020-01-30 11:11:32.8227||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:11:32 Readiness Publisher : Healthy,00:00:00.0006979,1  
+
+2020-01-30 11:11:52.8245||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:11:52 Readiness Publisher : Healthy,00:00:00.0005604,1  
+
+2020-01-30 11:12:12.8246||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:12:12 Readiness Publisher : Healthy,00:00:00.0005528,1  
+
+2020-01-30 11:12:32.8240||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:12:32 Readiness Publisher : Healthy,00:00:00.0006166,1  
+
+2020-01-30 11:12:52.8243||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:12:52 Readiness Publisher : Healthy,00:00:00.0006233,1  
+
+2020-01-30 11:13:12.8243||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:13:12 Readiness Publisher : Healthy,00:00:00.0007548,1  
+
+2020-01-30 11:13:32.8143||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:13:32 Readiness Publisher : Healthy,00:00:00.0008537,1  
+
+2020-01-30 11:13:52.8256||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:13:52 Readiness Publisher : Healthy,00:00:00.0006600,1  
+
+2020-01-30 11:14:12.8141||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:14:12 Readiness Publisher : Healthy,00:00:00.0005196,1  
+
+2020-01-30 11:14:32.8148||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:14:32 Readiness Publisher : Healthy,00:00:00.0007348,1  
+
+2020-01-30 11:14:52.8244||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:14:52 Readiness Publisher : Healthy,00:00:00.0006817,1  
+
+2020-01-30 11:15:12.8246||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:15:12 Readiness Publisher : Healthy,00:00:00.0004665,1  
+
+2020-01-30 11:15:32.8137||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:15:32 Readiness Publisher : Healthy,00:00:00.0001784,1  
+
+2020-01-30 11:15:52.8236||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:15:52 Readiness Publisher : Healthy,00:00:00.0002734,1  
+
+2020-01-30 11:16:12.8141||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:16:12 Readiness Publisher : Healthy,00:00:00.0004263,1  
+
+2020-01-30 11:16:32.8248||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:16:32 Readiness Publisher : Healthy,00:00:00.0003398,1  
+
+2020-01-30 11:16:52.8131||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:16:52 Readiness Publisher : Healthy,00:00:00.0001258,1  
+
+2020-01-30 11:17:12.8227||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:17:12 Readiness Publisher : Healthy,00:00:00.0002205,1  
+
+2020-01-30 11:17:32.8240||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:17:32 Readiness Publisher : Healthy,00:00:00.0001919,1  
+
+2020-01-30 11:17:52.8291||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:17:52 Readiness Publisher : Healthy,00:00:00.0003035,1  
+
+2020-01-30 11:18:12.8237||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:18:12 Readiness Publisher : Healthy,00:00:00.0001569,1  
+
+2020-01-30 11:18:32.8228||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:18:32 Readiness Publisher : Healthy,00:00:00.0001540,1  
+
+2020-01-30 11:18:52.8252||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:18:52 Readiness Publisher : Healthy,00:00:00.0002341,1  
+
+2020-01-30 11:19:12.8222||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:19:12 Readiness Publisher : Healthy,00:00:00.0002909,1  
+
+2020-01-30 11:19:32.8137||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:19:32 Readiness Publisher : Healthy,00:00:00.0002871,1  
+
+2020-01-30 11:19:52.8236||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:19:52 Readiness Publisher : Healthy,00:00:00.0002548,1  
+
+2020-01-30 11:20:12.8130||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:20:12 Readiness Publisher : Healthy,00:00:00.0001354,1  
+
+2020-01-30 11:20:32.8124||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:20:32 Readiness Publisher : Healthy,00:00:00.0002044,1  
+
+2020-01-30 11:20:52.8137||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:20:52 Readiness Publisher : Healthy,00:00:00.0003369,1  
+
+2020-01-30 11:21:12.8141||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:21:12 Readiness Publisher : Healthy,00:00:00.0003310,1  
+
+2020-01-30 11:21:32.8724||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:21:32 Readiness Publisher : Healthy,00:00:00.0001096,1  
+
+2020-01-30 11:21:52.8129||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:21:52 Readiness Publisher : Healthy,00:00:00.0000976,1  
+
+2020-01-30 11:22:12.8232||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:22:12 Readiness Publisher : Healthy,00:00:00.0002407,1  
+
+2020-01-30 11:22:32.8246||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:22:32 Readiness Publisher : Healthy,00:00:00.0002243,1  
+
+2020-01-30 11:22:52.8134||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:22:52 Readiness Publisher : Healthy,00:00:00.0001960,1  
+
+2020-01-30 11:23:11.3568||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 11:23:12.8241||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:23:12 Readiness Publisher : Healthy,00:00:00.0002022,1  
+
+2020-01-30 11:23:16.8033||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager 
+User profile is available. Using 'C:\Users\vesper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.  
+
+2020-01-30 11:23:17.6287||INFO|Microsoft.EntityFrameworkCore.Infrastructure 
+Entity Framework Core 3.1.0 initialized 'DBContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 14.14 MySql   
+
+2020-01-30 11:23:17.8017||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (24ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+                    SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+                    FROM information_schema.tables
+                    WHERE table_type = 'BASE TABLE' AND table_schema = 'microservice'  
+
+2020-01-30 11:23:17.9987||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `user` AS `u`  
+
+2020-01-30 11:23:18.0794||FATAL|Microsoft.AspNetCore.Server.Kestrel 
+Unable to start Kestrel. Failed to bind to address http://0.0.0.0:5002: address already in use. 
+
+2020-01-30 11:23:18.1151||FATAL|microservice_sketch.Program 
+ start nLog exceptionFailed to bind to address http://0.0.0.0:5002: address already in use. Failed to bind to address http://0.0.0.0:5002: address already in use. 
+
+2020-01-30 11:23:32.8245||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:23:32 Readiness Publisher : Healthy,00:00:00.0004416,1  
+
+2020-01-30 11:23:52.8126||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:23:52 Readiness Publisher : Healthy,00:00:00.0001466,1  
+
+2020-01-30 11:24:12.8138||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:24:12 Readiness Publisher : Healthy,00:00:00.0003681,1  
+
+2020-01-30 11:24:32.8131||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:24:32 Readiness Publisher : Healthy,00:00:00.0001220,1  
+
+2020-01-30 11:24:52.8243||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:24:52 Readiness Publisher : Healthy,00:00:00.0002467,1  
+
+2020-01-30 11:25:12.8235||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:25:12 Readiness Publisher : Healthy,00:00:00.0001239,1  
+
+2020-01-30 11:25:32.8234||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:25:32 Readiness Publisher : Healthy,00:00:00.0002012,1  
+
+2020-01-30 11:25:52.8231||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:25:52 Readiness Publisher : Healthy,00:00:00.0000827,1  
+
+2020-01-30 11:26:12.8247||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:26:12 Readiness Publisher : Healthy,00:00:00.0003214,1  
+
+2020-01-30 11:26:32.8237||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:26:32 Readiness Publisher : Healthy,00:00:00.0001218,1  
+
+2020-01-30 11:26:44.5673||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 11:26:50.0570||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager 
+User profile is available. Using 'C:\Users\vesper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.  
+
+2020-01-30 11:26:50.9096||INFO|Microsoft.EntityFrameworkCore.Infrastructure 
+Entity Framework Core 3.1.0 initialized 'DBContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 14.14 MySql   
+
+2020-01-30 11:26:51.0857||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+                    SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+                    FROM information_schema.tables
+                    WHERE table_type = 'BASE TABLE' AND table_schema = 'microservice'  
+
+2020-01-30 11:26:51.2930||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `user` AS `u`  
+
+2020-01-30 11:26:51.3638||INFO|Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000  
+
+2020-01-30 11:26:51.3680||INFO|Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.  
+
+2020-01-30 11:26:51.3680||INFO|Microsoft.Hosting.Lifetime 
+Hosting environment: Development  
+
+2020-01-30 11:26:51.3680||INFO|Microsoft.Hosting.Lifetime 
+Content root path: C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch  
+
+2020-01-30 11:26:51.6507||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/    
+
+2020-01-30 11:26:51.8870||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 248.4078ms 404   
+
+2020-01-30 11:26:52.8242||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:26:52 Readiness Publisher : Healthy,00:00:00.0002682,1  
+
+2020-01-30 11:26:55.1307||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:26:55 Readiness Publisher : Healthy,00:00:00.0158455,1  
+
+2020-01-30 11:27:12.8244||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:27:12 Readiness Publisher : Healthy,00:00:00.0001141,1  
+
+2020-01-30 11:27:15.0912||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:27:15 Readiness Publisher : Healthy,00:00:00.0010995,1  
+
+2020-01-30 11:27:30.6397||INFO|Microsoft.Hosting.Lifetime 
+Application is shutting down...  
+
+2020-01-30 11:27:35.0945||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:27:35 Readiness Publisher : Healthy,00:00:00.0019166,1  
+
+2020-01-30 11:27:54.6937||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 11:41:41.2312||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 11:41:45.5092||INFO|microservice_sketch.Startup 
+typeOCGs6lR4hGA=  
+
+2020-01-30 11:41:49.5377||INFO|microservice_sketch.Startup 
+server4GetLBfTFn0XvLsHRUTz5w==  
+
+2020-01-30 11:41:53.5567||INFO|microservice_sketch.Startup 
+portCbJLJgRhpEw=  
+
+2020-01-30 11:41:57.5727||INFO|microservice_sketch.Startup 
+user_idIB%2BTGEyiKOE=  
+
+2020-01-30 11:42:01.5885||INFO|microservice_sketch.Startup 
+password3BCbmawotX8Qjv%2BTuzMGpA==  
+
+2020-01-30 11:42:05.6084||INFO|microservice_sketch.Startup 
+db_namesvEV/TdhFO2/Pu%2BgLt%2BPtA==  
+
+2020-01-30 11:42:09.9685||INFO|Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager 
+User profile is available. Using 'C:\Users\vesper\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.  
+
+2020-01-30 11:42:10.6591||INFO|Microsoft.EntityFrameworkCore.Infrastructure 
+Entity Framework Core 3.1.0 initialized 'DBContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 14.14 MySql   
+
+2020-01-30 11:42:10.8332||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+                    SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+                    FROM information_schema.tables
+                    WHERE table_type = 'BASE TABLE' AND table_schema = 'microservice'  
+
+2020-01-30 11:42:11.0311||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `user` AS `u`  
+
+2020-01-30 11:42:11.0775||INFO|Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000  
+
+2020-01-30 11:42:11.0775||INFO|Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.  
+
+2020-01-30 11:42:11.0775||INFO|Microsoft.Hosting.Lifetime 
+Hosting environment: Development  
+
+2020-01-30 11:42:11.0775||INFO|Microsoft.Hosting.Lifetime 
+Content root path: C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch  
+
+2020-01-30 11:42:15.0198||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:42:15 Readiness Publisher : Healthy,00:00:00.0173422,1  
+
+2020-01-30 11:42:17.9075||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html    
+
+2020-01-30 11:42:18.0153||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 108.728ms 200 text/html;charset=utf-8  
+
+2020-01-30 11:42:18.0591||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-standalone-preset.js    
+
+2020-01-30 11:42:18.0591||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui-bundle.js    
+
+2020-01-30 11:42:18.0591||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/swagger-ui.css    
+
+2020-01-30 11:42:18.0864||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware 
+Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'  
+
+2020-01-30 11:42:18.0864||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware 
+Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'  
+
+2020-01-30 11:42:18.0864||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware 
+Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'  
+
+2020-01-30 11:42:18.0864||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 26.5719ms 200 text/css  
+
+2020-01-30 11:42:18.0864||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 32.4981ms 200 application/javascript  
+
+2020-01-30 11:42:18.0864||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 32.2137ms 200 application/javascript  
+
+2020-01-30 11:42:18.2880||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json    
+
+2020-01-30 11:42:18.3274||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png    
+
+2020-01-30 11:42:18.3274||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware 
+Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'  
+
+2020-01-30 11:42:18.3340||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 6.9573ms 200 image/png  
+
+2020-01-30 11:42:18.4488||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 160.7554ms 200 application/json;charset=utf-8  
+
+2020-01-30 11:42:34.9983||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:42:34 Readiness Publisher : Healthy,00:00:00.0022622,1  
+
+2020-01-30 11:42:54.9952||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:42:54 Readiness Publisher : Healthy,00:00:00.0009633,1  
+
+2020-01-30 11:43:15.0082||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:43:15 Readiness Publisher : Healthy,00:00:00.0012505,1  
+
+2020-01-30 11:43:34.9971||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:43:34 Readiness Publisher : Healthy,00:00:00.0020074,1  
+
+2020-01-30 11:43:54.9952||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:43:54 Readiness Publisher : Healthy,00:00:00.0006332,1  
+
+2020-01-30 11:44:14.9948||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:44:14 Readiness Publisher : Healthy,00:00:00.0009247,1  
+
+2020-01-30 11:44:35.0124||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:44:35 Readiness Publisher : Healthy,00:00:00.0019088,1  
+
+2020-01-30 11:44:55.0086||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:44:55 Readiness Publisher : Healthy,00:00:00.0018604,1  
+
+2020-01-30 11:44:58.0882||INFO|Microsoft.Hosting.Lifetime 
+Application is shutting down...  
+
+2020-01-30 11:47:19.7829||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 11:47:25.1587||INFO|Microsoft.EntityFrameworkCore.Infrastructure 
+Entity Framework Core 3.1.0 initialized 'DBContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 14.14 MySql   
+
+2020-01-30 11:47:25.3177||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+                    SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+                    FROM information_schema.tables
+                    WHERE table_type = 'BASE TABLE' AND table_schema = 'microservice'  
+
+2020-01-30 11:47:25.5168||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (6ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `user` AS `u`  
+
+2020-01-30 11:47:25.5814||INFO|Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000  
+
+2020-01-30 11:47:25.5814||INFO|Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.  
+
+2020-01-30 11:47:25.5814||INFO|Microsoft.Hosting.Lifetime 
+Hosting environment: Development  
+
+2020-01-30 11:47:25.5836||INFO|Microsoft.Hosting.Lifetime 
+Content root path: C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch  
+
+2020-01-30 11:47:25.7637||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html    
+
+2020-01-30 11:47:25.8597||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 96.928ms 200 text/html;charset=utf-8  
+
+2020-01-30 11:47:26.0736||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json    
+
+2020-01-30 11:47:26.0736||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png    
+
+2020-01-30 11:47:26.0884||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware 
+Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'  
+
+2020-01-30 11:47:26.0884||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 16.0067ms 200 image/png  
+
+2020-01-30 11:47:26.1985||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 125.1472ms 200 application/json;charset=utf-8  
+
+2020-01-30 11:47:29.5272||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:47:29 Readiness Publisher : Healthy,00:00:00.0114994,1  
+
+2020-01-30 11:47:49.5184||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:47:49 Readiness Publisher : Healthy,00:00:00.0024027,1  
+
+2020-01-30 11:48:08.3412||INFO|Microsoft.Hosting.Lifetime 
+Application is shutting down...  
+
+2020-01-30 11:49:59.6052||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 11:50:05.0116||INFO|Microsoft.EntityFrameworkCore.Infrastructure 
+Entity Framework Core 3.1.0 initialized 'DBContext' using provider 'Pomelo.EntityFrameworkCore.MySql' with options: ServerVersion 14.14 MySql   
+
+2020-01-30 11:50:05.1758||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+                    SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+                    FROM information_schema.tables
+                    WHERE table_type = 'BASE TABLE' AND table_schema = 'microservice'  
+
+2020-01-30 11:50:05.3626||INFO|Microsoft.EntityFrameworkCore.Database.Command 
+Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM `user` AS `u`  
+
+2020-01-30 11:50:05.4266||INFO|Microsoft.Hosting.Lifetime 
+Now listening on: http://localhost:5000  
+
+2020-01-30 11:50:05.4292||INFO|Microsoft.Hosting.Lifetime 
+Application started. Press Ctrl+C to shut down.  
+
+2020-01-30 11:50:05.4292||INFO|Microsoft.Hosting.Lifetime 
+Hosting environment: Development  
+
+2020-01-30 11:50:05.4292||INFO|Microsoft.Hosting.Lifetime 
+Content root path: C:\WorkSpace\Kooco\microservice_sketch\microservice_sketch\microservice_sketch  
+
+2020-01-30 11:50:09.3950||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:50:09 Readiness Publisher : Healthy,00:00:00.0282268,1  
+
+2020-01-30 11:50:21.4851||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html    
+
+2020-01-30 11:50:21.5862||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 101.9576ms 200 text/html;charset=utf-8  
+
+2020-01-30 11:50:21.8455||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json    
+
+2020-01-30 11:50:21.8455||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request starting HTTP/1.1 GET http://localhost:5000/swagger/favicon-32x32.png    
+
+2020-01-30 11:50:21.8599||INFO|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware 
+Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'  
+
+2020-01-30 11:50:21.8599||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 15.8348ms 200 image/png  
+
+2020-01-30 11:50:22.0093||INFO|Microsoft.AspNetCore.Hosting.Diagnostics 
+Request finished in 163.7077ms 200 application/json;charset=utf-8  
+
+2020-01-30 11:50:29.3560||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:50:29 Readiness Publisher : Healthy,00:00:00.0025599,1  
+
+2020-01-30 11:50:49.3529||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:50:49 Readiness Publisher : Healthy,00:00:00.0020617,1  
+
+2020-01-30 11:51:09.3524||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:51:09 Readiness Publisher : Healthy,00:00:00.0011100,1  
+
+2020-01-30 11:51:29.3508||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:51:29 Readiness Publisher : Healthy,00:00:00.0008734,1  
+
+2020-01-30 11:51:49.3524||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:51:49 Readiness Publisher : Healthy,00:00:00.0017919,1  
+
+2020-01-30 11:52:09.3515||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:52:09 Readiness Publisher : Healthy,00:00:00.0013097,1  
+
+2020-01-30 11:52:29.3513||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:52:29 Readiness Publisher : Healthy,00:00:00.0010558,1  
+
+2020-01-30 11:52:49.3513||INFO|microservice_sketch.ReadinessPublisher 
+2020/1/30 上午 03:52:49 Readiness Publisher : Healthy,00:00:00.0014438,1  
+
+2020-01-30 11:53:02.8150||INFO|Microsoft.Hosting.Lifetime 
+Application is shutting down...  
+
+2020-01-30 11:54:30.5175||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 11:55:01.3728||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 11:56:53.7452||INFO|microservice_sketch.Program 
+ start nLog  
+
+2020-01-30 12:00:05.5221||INFO|microservice_sketch.Program 
+ start nLog  
+

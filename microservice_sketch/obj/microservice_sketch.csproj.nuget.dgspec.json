@@ -160,6 +160,10 @@
               "target": "Package",
               "version": "[3.1.0, )"
             },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[0.62.0-beta6, )"
+            },
             "NLog.Web.AspNetCore": {
               "target": "Package",
               "version": "[4.9.0, )"
@@ -170,7 +174,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[5.0.0-rc5, )"
+              "version": "[5.0.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

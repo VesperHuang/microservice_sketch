@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>microservice_sketch</name>
+    </assembly>
+    <members>
+        <member name="M:microservice_sketch.Controllers.UserCenterController.make_exceptin">
+            <summary>
+                make exception to test HealthCheckService
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:microservice_sketch.Models.service_data_repository">
+            <summary>
+            controls get,set data logic must be here, can't put in controlls
+            </summary>
+        </member>
+        <member name="T:microservice_sketch.Services.DataBase">
+            <summary>
+            it's not use, current use entity framework
+            </summary>
+        </member>
+        <member name="M:microservice_sketch.Services.HealthCheckService.write_exception(System.String,System.String)">
+            <summary>
+                need to define exception level for microservice
+            </summary>
+            <param name="level"></param>
+            <param name="exception_message"></param>
+        </member>
+        <member name="M:microservice_sketch.Services.MemoryCacheService.#ctor">
+            <summary>
+                size_limit: golbal cache size
+                instance_size_limit: instance cache size can't  equal or more then golbal cache size
+                default:passive
+            </summary>
+        </member>
+    </members>
+</doc>

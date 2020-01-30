@@ -1235,7 +1235,7 @@
           }
         }
       },
-      "MySqlConnector/0.61.0": {
+      "MySqlConnector/0.62.0-beta6": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.0/MySqlConnector.dll": {}
@@ -1652,19 +1652,19 @@
           "lib/netstandard1.5/StackExchange.Redis.StrongName.dll": {}
         }
       },
-      "Swashbuckle.AspNetCore/5.0.0-rc5": {
+      "Swashbuckle.AspNetCore/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.ApiDescription.Server": "3.0.0",
-          "Swashbuckle.AspNetCore.Swagger": "5.0.0-rc5",
-          "Swashbuckle.AspNetCore.SwaggerGen": "5.0.0-rc5",
-          "Swashbuckle.AspNetCore.SwaggerUI": "5.0.0-rc5"
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0",
+          "Swashbuckle.AspNetCore.SwaggerGen": "5.0.0",
+          "Swashbuckle.AspNetCore.SwaggerUI": "5.0.0"
         },
         "build": {
           "build/Swashbuckle.AspNetCore.props": {}
         }
       },
-      "Swashbuckle.AspNetCore.Swagger/5.0.0-rc5": {
+      "Swashbuckle.AspNetCore.Swagger/5.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.1.4"
@@ -1679,10 +1679,10 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Swashbuckle.AspNetCore.SwaggerGen/5.0.0-rc5": {
+      "Swashbuckle.AspNetCore.SwaggerGen/5.0.0": {
         "type": "package",
         "dependencies": {
-          "Swashbuckle.AspNetCore.Swagger": "5.0.0-rc5"
+          "Swashbuckle.AspNetCore.Swagger": "5.0.0"
         },
         "compile": {
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.dll": {}
@@ -1694,7 +1694,7 @@
           "Microsoft.AspNetCore.App"
         ]
       },
-      "Swashbuckle.AspNetCore.SwaggerUI/5.0.0-rc5": {
+      "Swashbuckle.AspNetCore.SwaggerUI/5.0.0": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.dll": {}
@@ -5258,10 +5258,10 @@
         "version.txt"
       ]
     },
-    "MySqlConnector/0.61.0": {
-      "sha512": "E01yibVzCkVOmhNsUb+B4amjQKfKFlGiR1huNd6Q8aTCqBrACo0I3JMKvJBMpZfYhAsR8bqB9496PwcGpr+LuQ==",
+    "MySqlConnector/0.62.0-beta6": {
+      "sha512": "3+1N/9f76pk7k3VAl13dupWuNz1Qb099/GRgGQUeimrLgWN+1arFfpa0cB7P0qDeHNy5uDLsPBVh3zpbFQqiqg==",
       "type": "package",
-      "path": "mysqlconnector/0.61.0",
+      "path": "mysqlconnector/0.62.0-beta6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5282,7 +5282,7 @@
         "lib/netstandard2.1/MySqlConnector.dll",
         "lib/netstandard2.1/MySqlConnector.xml",
         "logo.png",
-        "mysqlconnector.0.61.0.nupkg.sha512",
+        "mysqlconnector.0.62.0-beta6.nupkg.sha512",
         "mysqlconnector.nuspec"
       ]
     },
@@ -5776,22 +5776,22 @@
         "stackexchange.redis.strongname.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore/5.0.0-rc5": {
-      "sha512": "hvjEYpwsW60u7Sc47sJj+D5u0r/EH/vdJdPmyTp/94fzcw3dgj0Q5b9pAv+NZbdiR73QZYw/mv4ChMy80PzmTg==",
+    "Swashbuckle.AspNetCore/5.0.0": {
+      "sha512": "HoJbhDNyeDqr2R1H3YhtPqGacxgZKBFBS6g5U3tlJpv80G/IHW8hHbcnHSTXZpcatnD+xh8UiUrKp4Ua857LSQ==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore/5.0.0-rc5",
+      "path": "swashbuckle.aspnetcore/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "build/Swashbuckle.AspNetCore.props",
-        "swashbuckle.aspnetcore.5.0.0-rc5.nupkg.sha512",
+        "swashbuckle.aspnetcore.5.0.0.nupkg.sha512",
         "swashbuckle.aspnetcore.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.Swagger/5.0.0-rc5": {
-      "sha512": "ciQT9JZ6XDe/58UlmEwHb7ph3p/SRwp3/sAbW1/aRh/TV0ZNatMhmTmr3F/TXCyoUykdiemKuNZULAEpNa64vA==",
+    "Swashbuckle.AspNetCore.Swagger/5.0.0": {
+      "sha512": "4MhbjCErPsLnkyYrNc7OFUWVYoyhJRGAoFwbuDONslIOhIn5CmM52a4hO8s/jaM5i55uDms/veh24d/fR1UvZw==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swagger/5.0.0-rc5",
+      "path": "swashbuckle.aspnetcore.swagger/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5799,14 +5799,14 @@
         "lib/netcoreapp3.0/Swashbuckle.AspNetCore.Swagger.xml",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.dll",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.Swagger.xml",
-        "swashbuckle.aspnetcore.swagger.5.0.0-rc5.nupkg.sha512",
+        "swashbuckle.aspnetcore.swagger.5.0.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swagger.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.SwaggerGen/5.0.0-rc5": {
-      "sha512": "qw513z7MUumket5bq3pBlwpBvZyt8CLrbqeoQR2j6aVshanyoTv+tuNc2PCOMIA2L/3PvajJ2zFoeOIe56x+lQ==",
+    "Swashbuckle.AspNetCore.SwaggerGen/5.0.0": {
+      "sha512": "liZs2B35w1bHNacpNoDofNCJKmEhUaHVgvtUsjt/AToKQdZQpk9dvLWrEfRHiuwZVUiKLL30lsiV4dEF/Drzlw==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggergen/5.0.0-rc5",
+      "path": "swashbuckle.aspnetcore.swaggergen/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5814,14 +5814,14 @@
         "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.dll",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerGen.xml",
-        "swashbuckle.aspnetcore.swaggergen.5.0.0-rc5.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggergen.5.0.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggergen.nuspec"
       ]
     },
-    "Swashbuckle.AspNetCore.SwaggerUI/5.0.0-rc5": {
-      "sha512": "6Ya/Zt9hSaDf9ouEzQxBIyfKesxCS/bxX4iCDU4cvyWBrdOdZ562IExej0KIRSUerUqdyEjmF2nlqAbTfW3MiQ==",
+    "Swashbuckle.AspNetCore.SwaggerUI/5.0.0": {
+      "sha512": "MKDE976W6VUKc+3N/os/xgfj/WpxoHLGBlnURNyC8cb81XjKfTduoJ4JcsBgFsevSM2Yp4lxNaBeJ6vRYN3V0Q==",
       "type": "package",
-      "path": "swashbuckle.aspnetcore.swaggerui/5.0.0-rc5",
+      "path": "swashbuckle.aspnetcore.swaggerui/5.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5829,7 +5829,7 @@
         "lib/netcoreapp3.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.dll",
         "lib/netstandard2.0/Swashbuckle.AspNetCore.SwaggerUI.xml",
-        "swashbuckle.aspnetcore.swaggerui.5.0.0-rc5.nupkg.sha512",
+        "swashbuckle.aspnetcore.swaggerui.5.0.0.nupkg.sha512",
         "swashbuckle.aspnetcore.swaggerui.nuspec"
       ]
     },
@@ -10386,9 +10386,10 @@
       "Microsoft.Extensions.Primitives >= 3.1.0",
       "Microsoft.IdentityModel.Tokens >= 5.6.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.0",
+      "MySqlConnector >= 0.62.0-beta6",
       "NLog.Web.AspNetCore >= 4.9.0",
       "Pomelo.EntityFrameworkCore.MySql >= 3.1.0",
-      "Swashbuckle.AspNetCore >= 5.0.0-rc5",
+      "Swashbuckle.AspNetCore >= 5.0.0",
       "System.IdentityModel.Tokens.Jwt >= 5.6.0",
       "kooco.common.models >= 1.0.0"
     ]
@@ -10497,6 +10498,10 @@
             "target": "Package",
             "version": "[3.1.0, )"
           },
+          "MySqlConnector": {
+            "target": "Package",
+            "version": "[0.62.0-beta6, )"
+          },
           "NLog.Web.AspNetCore": {
             "target": "Package",
             "version": "[4.9.0, )"
@@ -10507,7 +10512,7 @@
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
-            "version": "[5.0.0-rc5, )"
+            "version": "[5.0.0, )"
           },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",

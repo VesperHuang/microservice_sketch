@@ -54,7 +54,6 @@ namespace microservice_sketch.Models
             }
         }
 
-
         public static string get_user_data(DBContext dbContext,string account)
         {
             var result = string.Empty;

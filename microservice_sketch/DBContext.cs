@@ -13,6 +13,8 @@ namespace microservice_sketch
 
         public DbSet<user_role> user_role { get; set; }
 
+        public DbSet<syslogs> syslogs{get;set;}
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
            // modelBuilder.Entity<user>().Property(b => b.Url).HasColumnName("UrlAddress");
